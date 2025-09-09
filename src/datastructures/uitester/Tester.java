@@ -2,20 +2,35 @@ package datastructures.uitester;
 
 import datastructures.doubleylinkedlists.DoubleyLinkedList;
 import datastructures.linkedlists.LinkedList;
+import datastructures.queues.Queue;
+import datastructures.stacks.Stack;
 
 public class Tester {
 
     public static void main(String[] args) {
-        DoubleyLinkedList ddl = new DoubleyLinkedList(5);
-        ddl.append(6);
-        ddl.append(7);
-        ddl.append(8);
+//        Stack stack = new Stack(1);
+//        stack.push(2);
+//        stack.push(3);
+//        stack.push(4);
+//
+//        stack.printStack();
+//
+//        System.out.println("Pop operation: " + stack.pop().getValue());
+//        System.out.println("Pop operation: " + stack.pop().getValue());
+//
+//        stack.printStack();
 
-        ddl.set(3, 10);
+        Queue queue = new Queue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.enqueue(5);
 
-        System.out.println("Inserting at index 1 status : " + ddl.insert(1, 0));
-        System.out.println("Element removed from index 2: " + ddl.remove(2).getValue());
+        queue.printQueue();
 
-        ddl.printList();
+        System.out.println("Dequeing : " + queue.dequeue().getValue());
+        System.out.println("Dequeing : " + queue.dequeue().getValue());
+
+        queue.printQueue();
     }
 }
