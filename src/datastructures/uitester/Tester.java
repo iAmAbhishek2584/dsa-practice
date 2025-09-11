@@ -1,5 +1,6 @@
 package datastructures.uitester;
 
+import datastructures.Trees.BinarySearchTree;
 import datastructures.doubleylinkedlists.DoubleyLinkedList;
 import datastructures.linkedlists.LinkedList;
 import datastructures.queues.Queue;
@@ -20,17 +21,30 @@ public class Tester {
 //
 //        stack.printStack();
 
-        Queue queue = new Queue(1);
-        queue.enqueue(2);
-        queue.enqueue(3);
-        queue.enqueue(4);
-        queue.enqueue(5);
+//        Queue queue = new Queue(1);
+//        queue.enqueue(2);
+//        queue.enqueue(3);
+//        queue.enqueue(4);
+//        queue.enqueue(5);
+//
+//        queue.printQueue();
+//
+//        System.out.println("Dequeing : " + queue.dequeue().getValue());
+//        System.out.println("Dequeing : " + queue.dequeue().getValue());
+//
+//        queue.printQueue();
 
-        queue.printQueue();
+        BinarySearchTree bts = new BinarySearchTree();
 
-        System.out.println("Dequeing : " + queue.dequeue().getValue());
-        System.out.println("Dequeing : " + queue.dequeue().getValue());
+        bts.insert(47);
+        bts.insert(21);
+        bts.insert(76);
+        bts.insert(18);
+        bts.insert(52);
+        bts.insert(82);
 
-        queue.printQueue();
+        System.out.println(bts.getRoot().getRight().getRight().getValue());
+
+        System.out.println(bts.contains(18));
     }
 }

@@ -5,19 +5,60 @@ public class BinarySearchTree {
     private Node root;
 
 
+    public Node getRoot() {
+        return root;
+    }
 
     // operations
 
     // 1. insert
-    public void insert(int value) {
+    public boolean insert(int value) {
 
         Node node = new Node(value);
 
         if (root == null) {
             root = node;
-        } else {
-
+            return true;
         }
+
+        Node temp = root;
+
+        while (true) {
+            if (node.value == temp.value) return false;
+
+
+
+            if (node.value < temp.value) {
+
+                if (temp.left == null) {
+                    temp.left = node;
+                    return true;
+                }
+
+                temp = temp.left;
+
+            } else {
+
+                if (temp.right == null) {
+                    temp.right = node;
+                    return true;
+                }
+
+                temp = temp.right;
+
+            }
+        }
+    }
+
+    public boolean contains (int value) {
+        Node temp = root;
+
+        while (temp != null) {
+            if (value == temp.value) return true;
+
+            temp =  (value < temp.value) ? temp.left : temp.right;
+        }
+        return false;
     }
 
     public class Node {
@@ -32,5 +73,9 @@ public class BinarySearchTree {
         public int getValue() {
             return value;
         }
+
+        public Node getLeft() {return left;}
+
+        public Node getRight() {return right;}
     }
 }
