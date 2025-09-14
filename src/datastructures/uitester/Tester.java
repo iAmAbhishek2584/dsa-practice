@@ -2,6 +2,7 @@ package datastructures.uitester;
 
 import datastructures.Trees.BinarySearchTree;
 import datastructures.doubleylinkedlists.DoubleyLinkedList;
+import datastructures.hashtables.HashTable;
 import datastructures.linkedlists.LinkedList;
 import datastructures.queues.Queue;
 import datastructures.stacks.Stack;
@@ -34,17 +35,27 @@ public class Tester {
 //
 //        queue.printQueue();
 
-        BinarySearchTree bts = new BinarySearchTree();
+//        BinarySearchTree bts = new BinarySearchTree();
+//
+//        bts.insert(47);
+//        bts.insert(21);
+//        bts.insert(76);
+//        bts.insert(18);
+//        bts.insert(52);
+//        bts.insert(82);
+//
+//        System.out.println(bts.getRoot().getRight().getRight().getValue());
+//
+//        System.out.println(bts.contains(18));
 
-        bts.insert(47);
-        bts.insert(21);
-        bts.insert(76);
-        bts.insert(18);
-        bts.insert(52);
-        bts.insert(82);
 
-        System.out.println(bts.getRoot().getRight().getRight().getValue());
+        HashTable ht = new HashTable();
 
-        System.out.println(bts.contains(18));
+//        ht.printTable();
+        ht.set("banana", 12);
+        ht.set("apple", 20);
+        ht.set("mango", 13);
+
+        ht.printTable();
     }
 }
