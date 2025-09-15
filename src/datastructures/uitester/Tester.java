@@ -7,6 +7,8 @@ import datastructures.linkedlists.LinkedList;
 import datastructures.queues.Queue;
 import datastructures.stacks.Stack;
 
+import java.util.ArrayList;
+
 public class Tester {
 
     public static void main(String[] args) {
@@ -56,6 +58,8 @@ public class Tester {
         ht.set("apple", 20);
         ht.set("mango", 13);
 
-        ht.printTable();
+        System.out.println(ht.keys());
+
+
     }
 }
