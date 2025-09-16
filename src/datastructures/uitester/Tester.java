@@ -2,6 +2,7 @@ package datastructures.uitester;
 
 import datastructures.Trees.BinarySearchTree;
 import datastructures.doubleylinkedlists.DoubleyLinkedList;
+import datastructures.graphs.Graph;
 import datastructures.hashtables.HashTable;
 import datastructures.linkedlists.LinkedList;
 import datastructures.queues.Queue;
@@ -51,15 +52,34 @@ public class Tester {
 //        System.out.println(bts.contains(18));
 
 
-        HashTable ht = new HashTable();
-
+//        HashTable ht = new HashTable();
+//
 //        ht.printTable();
-        ht.set("banana", 12);
-        ht.set("apple", 20);
-        ht.set("mango", 13);
+//        ht.set("banana", 12);
+//        ht.set("apple", 20);
+//        ht.set("mango", 13);
+//
+//        System.out.println(ht.keys());
 
-        System.out.println(ht.keys());
+        Graph graph = new Graph();
 
+       graph.addVertex("A");
+       graph.addVertex("B");
+       graph.addVertex("C");
+       graph.addVertex("D");
+
+       graph.addEdge("A", "B");
+       graph.addEdge("A", "C");
+       graph.addEdge("A", "D");
+       graph.addEdge("B", "D");
+       graph.addEdge("C", "D");
+
+       graph.printGraph();
+
+//       graph.removeEdge("A", "B");
+        graph.removeVertex("D");
+
+       graph.printGraph();
 
     }
 }
