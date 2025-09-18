@@ -4,6 +4,7 @@ import datastructures.Trees.BinarySearchTree;
 import datastructures.doubleylinkedlists.DoubleyLinkedList;
 import datastructures.graphs.Graph;
 import datastructures.hashtables.HashTable;
+import datastructures.heaps.Heap;
 import datastructures.linkedlists.LinkedList;
 import datastructures.queues.Queue;
 import datastructures.stacks.Stack;
@@ -61,25 +62,43 @@ public class Tester {
 //
 //        System.out.println(ht.keys());
 
-        Graph graph = new Graph();
+//        Graph graph = new Graph();
+//
+//       graph.addVertex("A");
+//       graph.addVertex("B");
+//       graph.addVertex("C");
+//       graph.addVertex("D");
+//
+//       graph.addEdge("A", "B");
+//       graph.addEdge("A", "C");
+//       graph.addEdge("A", "D");
+//       graph.addEdge("B", "D");
+//       graph.addEdge("C", "D");
+//
+//       graph.printGraph();
+//
+////       graph.removeEdge("A", "B");
+//        graph.removeVertex("D");
+//
+//       graph.printGraph();
 
-       graph.addVertex("A");
-       graph.addVertex("B");
-       graph.addVertex("C");
-       graph.addVertex("D");
+        Heap heap = new Heap();
+        heap.insert(95);
+        heap.insert(75);
+        heap.insert(80);
+        heap.insert(55);
+        heap.insert(60);
+        heap.insert(50);
+        heap.insert(65);
 
-       graph.addEdge("A", "B");
-       graph.addEdge("A", "C");
-       graph.addEdge("A", "D");
-       graph.addEdge("B", "D");
-       graph.addEdge("C", "D");
+        System.out.println(heap.getHeap());
 
-       graph.printGraph();
+        heap.remove();
 
-//       graph.removeEdge("A", "B");
-        graph.removeVertex("D");
+        System.out.println(heap.getHeap());
 
-       graph.printGraph();
+        heap.remove();
 
+        System.out.println(heap.getHeap());
     }
 }
