@@ -82,23 +82,33 @@ public class Tester {
 //
 //       graph.printGraph();
 
-        Heap heap = new Heap();
-        heap.insert(95);
-        heap.insert(75);
-        heap.insert(80);
-        heap.insert(55);
-        heap.insert(60);
-        heap.insert(50);
-        heap.insert(65);
+//        Heap heap = new Heap();
+//        heap.insert(95);
+//        heap.insert(75);
+//        heap.insert(80);
+//        heap.insert(55);
+//        heap.insert(60);
+//        heap.insert(50);
+//        heap.insert(65);
+//
+//        System.out.println(heap.getHeap());
+//
+//        heap.remove();
+//
+//        System.out.println(heap.getHeap());
+//
+//        heap.remove();
+//
+//        System.out.println(heap.getHeap());
 
-        System.out.println(heap.getHeap());
+        BinarySearchTree bts = new BinarySearchTree();
 
-        heap.remove();
+        bts.rInsert(2);
+        bts.rInsert(1);
+        bts.rInsert(3);
 
-        System.out.println(heap.getHeap());
-
-        heap.remove();
-
-        System.out.println(heap.getHeap());
+        System.out.println(bts.getRoot().getValue());
+        System.out.println(bts.getRoot().getLeft().getValue());
+        System.out.println(bts.getRoot().getRight().getValue());
     }
 }
