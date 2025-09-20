@@ -50,6 +50,41 @@ public class BinarySearchTree {
         }
     }
 
+    // recursive delete
+    private Node rDelete(Node currentNode, int value) {
+        if (currentNode == null) return null;
+
+        if (value < currentNode.value) {
+            currentNode.left = rDelete(currentNode.left, value);
+        } else if (value > currentNode.value) {
+            currentNode.right = rDelete(currentNode.right, value);
+        } else {
+
+            if(currentNode.left == null && currentNode.right == null) return null;
+            else if (currentNode.left == null) currentNode = currentNode.right;
+            else if(currentNode.right == null) currentNode = currentNode.left;
+
+            else {
+                int subTreeMin = minValue(currentNode.right);
+                currentNode.value = subTreeMin;
+                currentNode.right = rDelete(currentNode.right, subTreeMin);
+            }
+        }
+        return currentNode;
+    }
+
+    public void rDelete(int value) {
+        root = rDelete(root, value);
+    }
+
+    // helper method
+    private int minValue(Node currentNode) {
+        while (currentNode.left!=null) {
+            currentNode = currentNode.left;
+        }
+        return currentNode.value;
+    }
+
     // recursive insert
     private Node rInsert(Node currentNode, int value) {
 
