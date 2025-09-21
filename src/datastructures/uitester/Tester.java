@@ -104,17 +104,13 @@ public class Tester {
         BinarySearchTree bts = new BinarySearchTree();
 
         bts.rInsert(47);
-        bts.rInsert(55);
-        bts.rInsert(23);
-        bts.rInsert(83);
-        bts.rInsert(50);
-        bts.rInsert(63);
-        bts.rInsert(13);
+        bts.rInsert(21);
+        bts.rInsert(76);
+        bts.rInsert(18);
+        bts.rInsert(27);
+        bts.rInsert(52);
+        bts.rInsert(82 );
 
-        System.out.println(bts.getRoot().getRight().getValue());
-
-        bts.rDelete(55);
-
-        System.out.println(bts.getRoot().getRight().getValue());
+        System.out.println(bts.BFS());
     }
 }
