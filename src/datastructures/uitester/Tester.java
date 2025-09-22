@@ -111,6 +111,6 @@ public class Tester {
         bts.rInsert(52);
         bts.rInsert(82 );
 
-        System.out.println(bts.BFS());
+        System.out.println(bts.DFSInOrder());
     }
 }

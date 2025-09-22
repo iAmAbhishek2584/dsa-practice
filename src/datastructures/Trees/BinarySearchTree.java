@@ -2,6 +2,7 @@ package datastructures.Trees;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class BinarySearchTree {
@@ -135,6 +136,61 @@ public class BinarySearchTree {
             temp =  (value < temp.value) ? temp.left : temp.right;
         }
         return false;
+    }
+
+    public ArrayList<Integer> DFSPreOrder() {
+        ArrayList<Integer> results = new ArrayList<>();
+
+        class Traversal {
+            public Traversal (Node currentNode) {
+                results.add(currentNode.value);
+
+                if (currentNode.left != null) {
+                    new Traversal(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    new Traversal(currentNode.right);
+                }
+            }
+        }
+        new Traversal(root);
+        return results;
+    }
+
+    public ArrayList<Integer> DFSPostOrder() {
+        ArrayList<Integer> results = new ArrayList<>();
+
+        class Traversal {
+            public Traversal (Node currentNode) {
+                if (currentNode.left != null) {
+                    new Traversal(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    new Traversal(currentNode.right);
+                }
+                results.add(currentNode.value);
+            }
+        }
+        new Traversal(root);
+        return results;
+    }
+
+    public ArrayList<Integer> DFSInOrder() {
+        ArrayList<Integer> results = new ArrayList<>();
+
+        class Traversal {
+            public Traversal (Node currentNode) {
+                if (currentNode.left != null) {
+                    new Traversal(currentNode.left);
+                }
+                results.add(currentNode.value);
+                if (currentNode.right != null) {
+                    new Traversal(currentNode.right);
+                }
+            }
+        }
+        new Traversal(root);
+        return results;
     }
 
     public ArrayList<Integer> BFS() {
