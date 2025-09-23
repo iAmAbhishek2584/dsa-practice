@@ -7,6 +7,9 @@ import datastructures.hashtables.HashTable;
 import datastructures.heaps.Heap;
 import datastructures.linkedlists.LinkedList;
 import datastructures.queues.Queue;
+import datastructures.sorts.Bubble;
+import datastructures.sorts.Insertion;
+import datastructures.sorts.Selection;
 import datastructures.stacks.Stack;
 
 import java.util.ArrayList;
@@ -101,16 +104,30 @@ public class Tester {
 //
 //        System.out.println(heap.getHeap());
 
-        BinarySearchTree bts = new BinarySearchTree();
+//        BinarySearchTree bts = new BinarySearchTree();
+//
+//        bts.rInsert(47);
+//        bts.rInsert(21);
+//        bts.rInsert(76);
+//        bts.rInsert(18);
+//        bts.rInsert(27);
+//        bts.rInsert(52);
+//        bts.rInsert(82 );
+//
+//        System.out.println(bts.DFSInOrder());
 
-        bts.rInsert(47);
-        bts.rInsert(21);
-        bts.rInsert(76);
-        bts.rInsert(18);
-        bts.rInsert(27);
-        bts.rInsert(52);
-        bts.rInsert(82 );
+        int [] arr = {11, 10, 5, 3, 1};
 
-        System.out.println(bts.DFSInOrder());
+        Bubble bubble = new Bubble();
+        Selection selectionSort = new Selection();
+
+//        bubble.sort(arr);
+//        selectionSort.sort(arr);
+        Insertion insertionSort = new Insertion();
+        insertionSort.sort(arr);
+
+        for (int i : arr) {
+            System.out.print(i + ", ");
+        }
     }
 }
