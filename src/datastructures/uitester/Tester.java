@@ -9,6 +9,7 @@ import datastructures.linkedlists.LinkedList;
 import datastructures.queues.Queue;
 import datastructures.sorts.Bubble;
 import datastructures.sorts.Insertion;
+import datastructures.sorts.Merge;
 import datastructures.sorts.Selection;
 import datastructures.stacks.Stack;
 
@@ -120,13 +121,16 @@ public class Tester {
 
         Bubble bubble = new Bubble();
         Selection selectionSort = new Selection();
+        Insertion insertionSort = new Insertion();
+        Merge mergeSort = new Merge();
 
 //        bubble.sort(arr);
 //        selectionSort.sort(arr);
-        Insertion insertionSort = new Insertion();
-        insertionSort.sort(arr);
+//        insertionSort.sort(arr);
 
-        for (int i : arr) {
+        int [] arr1 = mergeSort.sort(arr);
+
+        for (int i : arr1) {
             System.out.print(i + ", ");
         }
     }
