@@ -7,10 +7,7 @@ import datastructures.hashtables.HashTable;
 import datastructures.heaps.Heap;
 import datastructures.linkedlists.LinkedList;
 import datastructures.queues.Queue;
-import datastructures.sorts.Bubble;
-import datastructures.sorts.Insertion;
-import datastructures.sorts.Merge;
-import datastructures.sorts.Selection;
+import datastructures.sorts.*;
 import datastructures.stacks.Stack;
 
 import java.util.ArrayList;
@@ -123,14 +120,15 @@ public class Tester {
         Selection selectionSort = new Selection();
         Insertion insertionSort = new Insertion();
         Merge mergeSort = new Merge();
+        Quick quickSort = new Quick();
 
 //        bubble.sort(arr);
 //        selectionSort.sort(arr);
 //        insertionSort.sort(arr);
 
-        int [] arr1 = mergeSort.sort(arr);
+        quickSort.sort(arr, 0, arr.length-1);
 
-        for (int i : arr1) {
+        for (int i : arr) {
             System.out.print(i + ", ");
         }
     }
