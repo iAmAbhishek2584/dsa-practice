@@ -2,6 +2,7 @@ package datastructures.uitester;
 
 import datastructures.Trees.BinarySearchTree;
 import datastructures.doubleylinkedlists.DoubleyLinkedList;
+import datastructures.dynamicprogramming.Fibonnaci;
 import datastructures.graphs.Graph;
 import datastructures.hashtables.HashTable;
 import datastructures.heaps.Heap;
@@ -126,10 +127,15 @@ public class Tester {
 //        selectionSort.sort(arr);
 //        insertionSort.sort(arr);
 
-        quickSort.sort(arr, 0, arr.length-1);
+//        quickSort.sort(arr, 0, arr.length-1);
+//
+//        for (int i : arr) {
+//            System.out.print(i + ", ");
+//        }
 
-        for (int i : arr) {
-            System.out.print(i + ", ");
-        }
+
+        Fibonnaci fibonnaci = new Fibonnaci();
+
+        System.out.println(fibonnaci.fib(7));
     }
 }
